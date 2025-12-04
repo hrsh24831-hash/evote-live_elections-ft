@@ -1,7 +1,7 @@
 // ===========================
 // GLOBAL
 // ===========================
-const API_BASE = "http://localhost:5001";
+const API_BASE = "https://evote-live-elections.onrender.com";
 
 const partyColors = {
     "BJP": { bg: "bg-orange-100", text: "text-orange-700" },
@@ -187,3 +187,4 @@ if (window.location.pathname.includes("result.html")) {
 if (window.location.pathname.includes("vote.html")) {
     loadCandidates();
 }
+
