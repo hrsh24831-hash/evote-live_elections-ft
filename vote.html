@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>e-Vote - Vote</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen p-10">
+
+<h2 class="text-4xl font-bold text-center text-blue-600 mb-10">
+    Select Your Candidate
+</h2>
+
+<div id="candidateList"
+     class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+</div>
+
+<button onclick="castVote()"
+        class="block mx-auto mt-10 bg-green-600 text-white text-xl font-semibold py-3 px-10 rounded-xl hover:bg-green-700 shadow-lg transition">
+    Cast Vote
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
