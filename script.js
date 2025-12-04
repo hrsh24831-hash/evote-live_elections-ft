@@ -86,7 +86,8 @@ function loadCandidates() {
 
                         <img src="${logoSrc}" class="h-20 w-20 object-contain rounded-full shadow" />
 
-                        <div class="text-2xl font-semibold text-gray-800">
+                        <div class="text-2xl font-semibold text-white !text-white drop-shadow-md">
+
                             ${c.name}
                         </div>
 
@@ -170,7 +171,7 @@ div.innerHTML = `
         
         <img src="${logo}" class="h-16 w-16 object-contain rounded-full shadow" />
 
-        <div class="text-2xl font-bold text-white">
+<div class="text-2xl font-bold text-white !text-white drop-shadow-md">
             ${r.name}
         </div>
 
@@ -199,6 +200,7 @@ div.innerHTML = `
 if (window.location.pathname.includes("vote.html")) {
     loadCandidates();
 }
+
 
 
 
