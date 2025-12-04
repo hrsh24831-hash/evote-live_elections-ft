@@ -162,18 +162,24 @@ if (window.location.pathname.includes("result.html")) {
                 let logo = partyLogos[partyName] || partyLogos["Independent"];
 
                 let div = document.createElement("div");
-                div.className = "p-4 bg-white rounded-xl shadow mb-3";
+div.className =
+    "p-6 bg-white/10 backdrop-blur-xl text-white rounded-2xl shadow-xl hover:shadow-2xl cursor-pointer border border-white/20 hover:border-blue-400 transition";
 
-                div.innerHTML = `
-                    <div class="flex justify-between items-center">
-                        <img src="${logo}" class="h-12 w-12 object-contain rounded-full shadow" />
-                        <span class="text-xl font-semibold">${r.name}</span>
-                        <span class="px-3 py-1 rounded-full ${color.bg} ${color.text}">
-                            ${partyName}
-                        </span>
-                        <span class="font-bold">${r.total_votes} votes</span>
-                    </div>
-                `;
+div.innerHTML = `
+    <div class="flex flex-col items-center space-y-4">
+        <img src="${logoSrc}" class="h-20 w-20 object-contain rounded-full shadow" />
+        <div class="text-2xl font-semibold text-white">
+            ${c.name}
+        </div>
+        <div class="px-3 py-1 rounded-full ${color.bg} ${color.text}">
+            ${partyName}
+        </div>
+        <input type="radio" name="candidate"
+            value="${c.candidate_id}"
+            class="w-5 h-5 accent-blue-600 cursor-pointer" />
+    </div>
+`;
+
 
                 box.appendChild(div);
             });
@@ -187,4 +193,5 @@ if (window.location.pathname.includes("result.html")) {
 if (window.location.pathname.includes("vote.html")) {
     loadCandidates();
 }
+
 
