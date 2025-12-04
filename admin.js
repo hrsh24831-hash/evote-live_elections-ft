@@ -1,4 +1,4 @@
-const API_BASE = "http://localhost:5001";
+const API_BASE = "https://evote-live-elections.onrender.com";
 
 // -----------------
 // LOGIN
@@ -191,3 +191,4 @@ function addVoter() {
             document.getElementById("v_const").value = "";
         });
 }
+
